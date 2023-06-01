@@ -1,0 +1,542 @@
+:root {
+    --gold:#C9A85C;
+    --black:#030303;
+    --glass:#D9D9D920;
+    --light-blue:#F8FAFD;
+    --heading-one:100px;
+    --mobile-heading-one:40px;
+    --heading-two:40px;
+    --mobile-heading-two:30px;
+    --card-title:30px;
+    --mobile-card-title:25px;
+    --price:40px;
+    --mobile-price:40px;
+    --text:18px;
+    --mobile-text:16px;
+}
+body {
+    background-color:var(--light-blue);
+}
+@font-face {
+    font-family: customFont;
+    src: url(../Adieu-Regular.ttf);
+}
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+button {
+    font-family: customFont;
+    line-height:1;
+}
+
+p {
+    line-height:1.75;
+    font-size:var(--text);
+}
+
+h2 {
+    font-size:var(--heading-two);
+}
+
+h1 {
+    font-size:var(--heading-one);
+    color:white;
+    text-align:center;
+    position:relative;
+}
+
+main,
+header,
+footer,
+section {
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width:1440px;
+    width:100%;
+    padding:8rem 4rem;
+}
+
+a {
+    color:white;
+    text-decoration: none;
+}
+ul {
+    list-style:none;
+}
+
+button {
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:1rem;
+    cursor:pointer;
+    background-color:transparent;
+    color:var(--gold);
+    border:none;
+}
+button img {
+    width:50px;
+}
+button span {
+    display:flex;
+    align-items: center;
+}
+
+/* Header */
+header {
+    position:fixed;
+    z-index:1000;
+}
+.header-wrapper {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    max-width:1440px;
+    padding:2rem 4rem;
+}
+.header-wrapper ul {
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    margin-right:0.5rem;
+    color:white;
+}
+nav {
+    display:flex;
+    align-items: center;
+    gap:1rem;
+}
+nav button {
+    display:block;
+    padding:0.5rem 1rem;
+    background-color:var(--black);
+    color:white;
+    border:2px solid var(--black);
+}
+nav button:nth-child(3) {
+    background-color:transparent;
+    color:var(--black);
+}
+@media (max-width:700px) {
+    nav {
+        display:none;
+    }
+}
+/* Main */
+
+main {
+    background-image: url(gm-motors-png-home/Group52.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+main .wrapper {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-block:12rem;
+    padding-bottom:24rem;
+}
+@media (max-width:1033px) {
+    main h1 {
+        font-size:85px;
+    }
+}
+@media (max-width:906px) {
+    main h1 {
+        font-size:80px;
+    }
+}
+@media (max-width:847px) {
+    main h1 {
+        font-size:70px;
+    }
+}
+@media (max-width:762px) {
+    main h1 {
+        font-size:60px;
+    }
+}
+@media (max-width:700px) {
+    main .wrapper {
+        padding-inline:2rem;
+    }
+}
+
+@media (max-width:600px) {
+    main h1 {
+        font-size:var(--mobile-heading-one);
+    }
+}
+@media (max-width:500px) {
+    main .wrapper {
+        padding-inline:1rem;
+    }
+}
+
+
+
+/* Featured  */
+
+.featured-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:8rem;
+}
+
+.featured-top {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:1rem;
+    width:100%;
+}
+.featured-grid-item img {
+    width:100%;
+}
+
+.featured-grid-item {
+    background-color:white;
+    width:100%;
+    padding:2rem 1rem;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap:1rem;
+}
+.featured-image {
+    height:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.featured-grid-item p {
+    line-height:1;
+}
+.featured-grid-item p:nth-of-type(1) {
+    line-height:1;
+    font-size:var(--card-title);
+    font-weight:700;
+}
+.price {
+    font-size:var(--price);
+    color:var(--gold);
+    font-weight: 700;
+    font-family:customFont;
+}
+@media (max-width:1186px) {
+    .featured-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+   .featured-image {
+    justify-content: center;
+    align-items: center;
+    width:100%;
+   }
+}
+@media (max-width:700px) {
+    .featured-section .wrapper {
+        padding-inline:2rem;
+    }
+}
+
+@media (max-width:600px) {
+    .featured-section h2 {
+        font-size:var(--mobile-heading-two);
+    }
+    .price {
+        font-size:var(--mobile-price);
+    }
+    .featured-grid-item p:nth-of-type(1) {
+        font-size:var(--mobile-card-title);
+    }
+}
+@media (max-width:574px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:500px) {
+    .featured-section .wrapper {
+        padding-inline:1rem;
+    }
+}
+
+/* Why */
+
+.why-section {
+    background-image: linear-gradient(#03030350, #03030350), url(gm-motors-png-home/arteum-ro-SkKTh9ZyTxU-unsplash1.png);
+    background-size:cover;
+    background-position: center;
+}
+.why-section h2 {
+    color:white;
+}
+.why-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:8rem;
+}
+.why-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:1rem;
+}
+.why-grid-item {
+    background-color:var(--glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding:2rem;
+    padding-inline:1rem;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1rem;
+}
+.why-grid-item p:nth-of-type(1) {
+    font-weight:700;
+    font-size:var(--card-title);
+    line-height:1;
+}
+
+
+@media (max-width:1186px) {
+    .why-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:700px) {
+    .why-section .wrapper {
+        padding-inline:2rem;
+    }
+}
+
+@media (max-width:600px) {
+    .why-section h2 {
+        font-size:var(--mobile-heading-two);
+    }
+    
+    .why-grid-item p:nth-of-type(1) {
+        font-size:var(--mobile-card-title);
+    }
+    .why-grid-item p:nth-child(2) {
+        font-size:var(--mobile-text);
+    }
+}
+@media (max-width:574px) {
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width:500px) {
+    .why-section .wrapper {
+        padding-inline:1rem;
+    }
+}
+
+/* Selector */
+
+.selector-section .wrapper {
+    display:flex;
+    align-items: center;
+    gap:4rem;
+}
+.selector-right {
+    width:50%;
+    position:relative;
+    height:100%;
+}
+.selector-left {
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+.selector-buttons img {
+    width:100px;
+    cursor:pointer;
+}
+.selector-buttons {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:2rem;
+}
+.selector-right img {
+    width:calc(100% + 4rem );
+    position:absolute;
+    top:50%;
+    left:calc(50% + 4rem);
+    transform:translate(-50%, -50%);
+    border-radius: 20rem 0rem 0rem 20rem;
+}
+
+@media (max-width:1186px) {
+    .selector-section .wrapper {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+  
+    .selector-left,
+    .selector-right {
+        width:100%;
+    }
+    .selector-right img {
+        position:static;
+        width:100%;
+        transform:translate(0%, 0%);
+        border-radius:0;
+    }
+}
+@media (max-width:700px) {
+    .selector-section .wrapper {
+        padding-inline:2rem;
+    }
+}
+
+@media (max-width:600px) {
+    .selector-section h2 {
+        font-size:var(--mobile-heading-two);
+    }
+    .selector-buttons {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap:1rem;
+    }
+    .selector-buttons img {
+        width:80px;
+    }
+    .selector-left p {
+        font-size:var(--mobile-text);
+    }
+}
+
+
+@media (max-width:500px) {
+    .selector-section .wrapper {
+        padding-inline:1rem;
+    }
+}
+@media (max-width:403px) {
+    .selector-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+    .selector-buttons img {
+        width:100px;
+    }
+}
+
+/* Contact */
+
+.contact-section {
+    background-image: linear-gradient(#03030350, #03030350), url(gm-motors-png-home/alain-gehri-w77TcvuhtWE-unsplash1.png);
+    color:white;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+fieldset {
+    border:none;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:100%;
+    gap:0.5rem;
+}
+form {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1rem;
+}
+input,
+textarea {
+    padding:0.25rem;
+    width:100%;
+    color:white;
+    padding-block:0.75rem;
+    background-color:var(--glass);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border:none;
+}
+.contact-section .wrapper {
+    display:flex;
+    align-items: center;
+    gap:4rem;
+}
+.contact-right {
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+.contact-left {
+    width:50%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+@media (max-width:1186px) {
+    .contact-section .wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .contact-left,
+    .contact-right {
+        width:100%;
+    }
+}
+@media (max-width:700px) {
+    .contact-section .wrapper {
+        padding-inline:2rem;
+    }
+}
+
+@media (max-width:600px) {
+    .contact-section h2 {
+        font-size:var(--mobile-heading-two);
+    }
+    
+    .contact-left p {
+        font-size:var(--mobile-text);
+    }
+}
+
+
+@media (max-width:500px) {
+    .contact-section .wrapper {
+        padding-inline:1rem;
+    }
+}
