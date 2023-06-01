@@ -19,7 +19,7 @@ body {
 }
 @font-face {
     font-family: customFont;
-    src: url(../Adieu-Regular.ttf);
+    src: url(Adieu-Regular.ttf);
 }
 *,
 *::before,
