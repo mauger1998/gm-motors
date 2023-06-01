@@ -246,7 +246,7 @@ main .wrapper {
 .passion-section .column:nth-child(1) p {
     display:flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap:1rem;
 }
 .passion-section .column:nth-child(1) p span {
@@ -296,5 +296,199 @@ main .wrapper {
 @media (max-width:500px) {
     .passion-section .wrapper {
         padding-inline:1rem;
+    }
+}
+
+/* Team */
+.team-section .wrapper {
+   display:grid;
+   grid-template-columns: 1fr 2fr 2fr;
+   gap:6rem;
+   padding-block:0;
+   padding-right:0;
+}
+.team-section .column:nth-child(3) {
+   display:grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   /* width:calc(100% + 4rem) */
+}
+.team-section .column:nth-child(3) img {
+   width:100%;
+   height:100%;
+   object-fit:cover;
+}
+.team-section .column:nth-child(2),
+.team-section .column:nth-child(1) {
+    padding-top:6rem;
+}
+.team-section .column:nth-child(2) {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+.team-section .column:nth-child(2) p {
+    max-width:35ch;
+}
+.team-section .column:nth-child(1) p {
+    display:flex;
+    align-items: center;
+    gap:1rem;
+}
+.team-section .column:nth-child(1) span {
+    display:flex;
+    align-items: center;
+}
+
+/* Test */
+.testimonials-section {
+    background-image: linear-gradient(#03030350, #03030350), url(../gm-motors-png-about/khamkeo-vilaysing-HD9P-xw2pEE-unsplash1.png);
+    background-size:cover;
+    background-position:center;
+}
+.testimonials-section .column h2,
+.testimonials-section .column p {
+    color:white;
+}
+.testimonials-section .wrapper {
+    display:grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap:2rem;
+    padding-bottom:2rem;
+}
+.testimonials-section .column:nth-child(1) {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1rem;
+}
+.testimonials-section .column:nth-child(3) {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:2rem;
+    row-gap:8rem;
+   
+}
+.test-card {
+    background-color:var(--glass);
+    backdrop-filter: blur(10px);
+    padding:2rem;
+    padding-inline:1rem;
+    display:flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.test-card p:nth-of-type(1) {
+    font-weight:700;
+    font-size:var(--mobile-card-title);
+}
+
+
+.quote  {
+    grid-column: span 2;
+    margin-top:auto;
+}
+.quote p {
+    font-size:var(--card-title);
+    line-height:1.2;
+    font-weight:500;
+}
+.test-card button {
+    margin-top:1rem;
+}
+@media (max-width:1186px) {
+    .testimonials-section .column:nth-child(2) {
+        display:none;
+    }
+    .testimonials-section .wrapper {
+        display:grid;
+        grid-template-columns: 1fr 2fr;
+        gap:2rem;
+        row-gap:4rem;
+    }
+}
+@media(max-width:1000px) {
+    .testimonials-section .column:nth-child(3) {
+        grid-template-columns: 1fr;
+        row-gap:2rem;
+
+    }
+    .quote  {
+        grid-column: auto;
+        margin-top:4rem;
+    }
+}
+@media (max-width:741px) {
+    .testimonials-section .wrapper {
+        display:grid;
+        grid-template-columns: 1fr;
+        gap:2rem;
+        row-gap:4rem;
+    }
+}
+@media(max-width:700px) {
+    .testimonials-section .wrapper {
+        padding-inline:2rem;
+    }
+}
+@media(max-width:600px) {
+   .testimonials-section h2 {
+    font-size:var(--mobile-heading-two);
+   }
+   .quote p {
+     font-size:var(--mobile-card-title);
+    }
+    .test-card p:nth-of-type(2) {
+        font-size:var(--mobile-text);
+    }
+    .testimonials-section .column:nth-child(1) p:nth-of-type(2) {
+        font-size:var(--mobile-text);
+    }
+}
+@media(max-width:500px) {
+    .testimonials-section .wrapper {
+        padding-inline:1rem;
+    }
+}
+/* CTA */
+.cta-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    padding-block:12rem;
+}
+.cta-section h2 {
+    font-size:var(--heading-one);
+    text-align: center;
+    line-height:1.2;
+}
+.cta-section button {
+    background-color:var(--black);
+    color:white;
+    border:2px solid var(--black);
+    padding:0.75rem 4rem;
+}
+@media (max-width:700px) {
+    .cta-section .wrapper {
+        padding-inline:2rem;
+    }
+    .cta-section h2 {
+        font-size:65px;
+    }
+}
+@media (max-width:600px) {
+    .cta-section h2 {
+        font-size: var(--mobile-heading-one);
+    }
+}
+@media (max-width:500px) {
+    .cta-section .wrapper {
+        padding-inline:1rem;
+    }
+    .cta-section button {
+        padding-inline:2rem;
     }
 }
