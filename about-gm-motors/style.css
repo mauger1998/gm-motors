@@ -99,6 +99,8 @@ button span {
 header {
     position:fixed;
     z-index:1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter:blur(10px) ;
 }
 .header-wrapper {
     display:flex;
@@ -127,7 +129,7 @@ nav button {
     color:white;
     border:2px solid var(--black);
 }
-nav button:nth-child(3) {
+nav a:nth-child(3)  button{
     background-color:transparent;
     color:var(--black);
 }
