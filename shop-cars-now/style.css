@@ -528,3 +528,101 @@ main .wrapper {
     width:100%;
 
 }
+
+/* Shop All */
+
+.all-cars-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width:100%;
+    gap:2rem;
+}
+.all-cars-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:8rem;
+}
+.all-cars-top {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width:100%;
+    gap:2rem;
+}
+.all-cars-top .column  {
+    display:flex;
+    flex-direction: column;
+}
+
+.all-cars-top .column:nth-child(1) {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.all-cars-top .column:nth-child(2) {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.all-cars-top span,
+.all-cars-top p {
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+}
+
+/* Book */
+
+.book-drive-section {
+    background-color:white;
+}
+
+.book-drive-section .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:8rem;
+}
+fieldset {
+    border:none;
+}
+.book-drive-top {
+    display:grid;
+}
+form {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self:center;
+    width:48%;
+    gap:1rem;
+}
+fieldset {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width:100%;
+    gap:0.5rem;
+}
+form img {
+    width:100%;
+}
+
+input,
+textarea,
+select {
+    width:100%;
+    padding:0.5rem;
+    background-color:var(--light-blue);
+    color:var(--black);
+    border:none;
+}
+label {
+    font-weight:500;
+}
+.row {
+    flex-direction: row;
+    align-items: center;
+    gap:0.5rem;
+}

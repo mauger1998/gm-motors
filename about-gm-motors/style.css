@@ -356,8 +356,9 @@ main .wrapper {
 }
 .passion-section .wrapper {
     display:grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap:2rem;
+    grid-template-columns: 1fr 2fr 2fr;
+    gap:6rem;
+    padding-right:0;
 }
 .passion-section .column:nth-child(2) {
     display:flex;
