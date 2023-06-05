@@ -557,6 +557,7 @@ main .wrapper {
 .test-card {
     background-color:var(--glass);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding:2rem;
     padding-inline:1rem;
     display:flex;
