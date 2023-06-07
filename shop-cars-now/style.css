@@ -258,7 +258,9 @@ nav a:nth-child(3)  button{
     }
 }
 /* Main */
-
+main {
+    background-color:white;
+}
 main p {
     max-width:25ch;
 }

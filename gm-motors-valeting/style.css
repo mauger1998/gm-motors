@@ -171,7 +171,7 @@ button span {
     font-weight:300 !important;
     color:white !important;
 }
-@media (max-width:1000px) {
+@media (max-width:1268px) {
     nav ul {
         display:none;
     }
@@ -262,7 +262,9 @@ nav a:nth-child(3)  button{
     }
 }
 /* Main */
-
+main {
+    background-color:white;
+}
 main p {
     max-width:25ch;
 }
@@ -350,9 +352,7 @@ main .wrapper {
 }
 
 /* Intro */
-.introduction-section {
-    background-color: white;
-}
+
 .introduction-section .wrapper {
     display:grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -422,6 +422,9 @@ main .wrapper {
 */
 
 /* Valet */
+.valet-section {
+    background-color:white;
+}
 
 .valet-section .wrapper {
     display:flex;
@@ -452,7 +455,9 @@ main .wrapper {
     align-items: center;
     gap:0.5rem;
 }
-
+.valet-right > p:nth-of-type(1) {
+    margin-bottom:-1rem;
+}
 .valet-list {
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -473,7 +478,7 @@ main .wrapper {
 }
 .valet-section:nth-of-type(3),
 .valet-section:nth-of-type(5){
-    background-color:white;
+    background-color:var(--light-blue);
 }
 .valet-section:nth-of-type(3) .wrapper .valet-left img,
 .valet-section:nth-of-type(5) .wrapper .valet-left img {
@@ -601,7 +606,9 @@ main .wrapper {
         border-radius:0rem;
         margin-left:0rem;
         margin-right:0rem;
-    
+    }
+    .valet-right > p:nth-of-type(1) {
+        margin-bottom:-2rem;
     }
     .valet-left,
     .valet-right {
