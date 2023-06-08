@@ -204,7 +204,7 @@ button span {
     display:none;
 }
 header {
-    position:fixed;
+    position:absolute;
     z-index:1000;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter:blur(10px) ;
@@ -439,9 +439,7 @@ main .wrapper {
     width:50%;
 }
 .valet-left img {
-    width:calc(100% + 4rem );
-    border-radius: 0rem 20rem 20rem 0rem;
-    margin-left:-4rem;
+    width:100%;
 }
 .valet-right {
     display:flex;
@@ -480,13 +478,7 @@ main .wrapper {
 .valet-section:nth-of-type(5){
     background-color:var(--light-blue);
 }
-.valet-section:nth-of-type(3) .wrapper .valet-left img,
-.valet-section:nth-of-type(5) .wrapper .valet-left img {
-    border-radius: 20rem 0rem 0rem 20rem;
-    margin-left:0rem;
-    margin-right:-4rem;
 
-}
 
 /* Full */
 /* Full */
@@ -500,13 +492,13 @@ main .wrapper {
 .full-item {
     /* width:50%; */
 }
-.full-item:nth-child(1) {
+.full-section a:nth-child(1) .full-item {
     background-image: linear-gradient(#03030350, #03030350), url(../gm-motors-png-valet/erik-mclean-D-eFjDWxIQs-unsplash1.png);
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.full-item:nth-child(2) {
+.full-section a:nth-child(2) .full-item {
     background-image: linear-gradient(#03030350, #03030350), url(../gm-motors-png-valet/nischal-kanishk-J75-n2L1Nu4-unsplash2.png);
     background-size:cover;
     background-repeat: no-repeat;

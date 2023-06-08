@@ -199,7 +199,7 @@ button span {
     display:none;
 }
 header {
-    position:fixed;
+    position:absolute;
     z-index:1000;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter:blur(10px) ;
@@ -356,13 +356,13 @@ main .wrapper {
 .full-item {
     /* width:50%; */
 }
-.full-item:nth-child(1) {
+.full-section a:nth-child(1) .full-item {
     background-image: linear-gradient(#03030350, #03030350), url(../gm-motors-png-sales/austin-neill-fLHjTTLURYg-unsplash1.png);
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.full-item:nth-child(2) {
+.full-section a:nth-child(2) .full-item {
     background-image: linear-gradient(#03030350, #03030350), url(../gm-motors-png-sales/wendell-fernandes-AiaamjU8-UY-unsplash1.png);
     background-size:cover;
     background-repeat: no-repeat;
