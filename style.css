@@ -423,7 +423,7 @@ main .wrapper {
 /* Why */
 
 .why-section {
-    background-image: linear-gradient(#03030350, #03030350), url();
+    background-image: linear-gradient(#03030350, #03030350), url(gm-motors-png-home/arteum-ro-SkKTh9ZyTxU-unsplash1.png);
     background-size:cover;
     background-position: center;
 }
@@ -547,6 +547,12 @@ main .wrapper {
     scale:1.05;
     transition:500ms;
 }
+.switch-wrap {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
 
 @media (max-width:1186px) {
     .selector-section .wrapper {
@@ -561,6 +567,9 @@ main .wrapper {
     }
     .selector-right {
        height:75vw;
+    }
+    .selector-left {
+        flex-direction: column-reverse;
     }
     .selector-absolute {
         width:100%;
@@ -695,6 +704,98 @@ textarea {
 
 @media (max-width:500px) {
     .contact-section .wrapper {
+        padding-inline:1rem;
+    }
+}
+/* Footer */
+
+footer img {
+    width:100px;
+}
+footer .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+    padding-bottom:4rem;
+}
+footer .logo {
+    display:flex;
+    align-items: center;
+}
+.footer-top {
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-top ul {
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    justify-content: flex-end;
+}
+.footer-bottom {
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width:100%;
+    border-top:1px solid black;
+    padding-top:4rem;
+}
+footer a,
+footer p {
+    color:black;
+}
+.footer-bottom a {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:0.5rem;
+}
+footer p {
+    font-size:16px;
+}
+footer button {
+    background-color:transparent;
+    border:2px solid var(--black);
+    padding:0.5rem 2rem;
+    color:var(--black);
+}
+
+
+@media (max-width:700px) {
+    footer .wrapper {
+        padding-inline:2rem;
+    }
+    .footer-top,
+    .footer-bottom {
+        flex-direction:column;
+        gap:4rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-bottom a {
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-top ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width:600px) {
+    .doctor-section h2 {
+        font-size:var(--mobile-heading-twp);
+    }
+    .doctor-list-item p {
+        font-weight:700;
+        font-size:var(--mobile-card-heading);
+    }
+    
+}
+@media (max-width:500px) {
+    footer .wrapper {
         padding-inline:1rem;
     }
 }
