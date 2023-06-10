@@ -729,6 +729,28 @@ label {
     align-items: center;
     gap:0.5rem;
 }
+/* Book Images */
+.book-images {
+    position:relative;
+    width:100%;
+    
+}
+.book-images img {
+    position:absolute;
+    inset:0;
+    width:100%;
+    opacity:0;
+
+}
+ .book-images img:first-child {
+    position:static;
+    inset:0;
+    width:100%;
+    
+} 
+.active-class {
+    opacity:1 !important;
+}
 @media (max-width:1186px) {
     form {
         display:flex;
@@ -855,4 +877,110 @@ footer button {
     footer .wrapper {
         padding-inline:1rem;
     }
+}
+
+/* All Cars */
+
+.all-cars-grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:2rem;
+}
+
+.all-cars-grid-item {
+    display:flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap:1rem;
+}
+.all-cars-grid-item-text {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:1rem;
+    padding-block:1rem;
+    width:100%;
+}
+.all-cars-grid-item img {
+    width:100%;
+}
+.all-cars-grid-item p {
+    line-height:1.2;
+}
+.all-cars-grid-item p:nth-of-type(1) {
+    line-height:1;
+    font-weight:700;
+    font-size:var(--mobile-card-title);
+}
+.all-cars-grid-item p:nth-of-type(2) {
+    line-height:1.2;
+    font-weight:300;
+    font-size:var(--mobile-text);
+}
+.car-price-box p {
+    line-height:1 !important;
+    font-weight:700 !important;
+    font-size:var(--heading-two) !important;
+}
+
+.car-price-box {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+}
+
+
+.button-container {
+    display:flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap:0.5rem;
+    width:100%;
+}
+.car-price-box img {
+    width:40px;
+    cursor:pointer;
+}
+.button-container a {
+    width:100%;
+}
+.button-container button {
+    border:2px solid var(--black);
+    border-radius:8rem;
+    background-color:transparent;
+    padding:0.5rem 2rem;
+    color:var(--black);
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+.button-container a:nth-child(1) button {
+    border:2px solid var(--black);
+    border-radius:8rem;
+    background-color:var(--black);
+    padding:0.5rem 2rem;
+    color:white;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+.more-info-box p {
+    line-height:1.5 !important;
+    font-weight:200 !important;
+    font-size:var(--mobile-text) !important;
+}
+
+.more-info-box {
+    transition:500ms !important;
+    max-height:0px !important;
+    overflow-y:hidden;
+}
+
+.box-active {
+    max-height:600px !important;
 }
