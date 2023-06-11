@@ -24,8 +24,12 @@ fetch(URL)
           
           if (result.length > 0) {
             const allCarsGrid = document.querySelector(".all-cars-grid")
+            allCarsGrid.innerHTML = ""
+            const featuredCarsGrid = document.querySelector(".featured-bottom-grid")
+            featuredCarsGrid.innerHTML = ""
 
             result.forEach((result, index) => {
+                
                 const gridItem = document.createElement("div")
                 gridItem.classList.add("all-cars-grid-item")
                 allCarsGrid.appendChild(gridItem)
@@ -51,6 +55,8 @@ fetch(URL)
                     noFinance.textContent = "No Finance Available"
                     allCarsGridText.appendChild(noFinance)
                 }
+
+                
                 
 
                 const carPriceBox = document.createElement("div")
@@ -129,6 +135,7 @@ fetch(URL)
                     dateTime.classList.add("active-message")
                     
                 })
+               
                 secondaryA.addEventListener("click", (e) => {
                     const bookImageArray = document.querySelectorAll(".book-images img")
                     select.value = selectOption.value
@@ -144,7 +151,6 @@ fetch(URL)
                 })
 
                 if (result.featured == true) {
-                    const featuredCarsGrid = document.querySelector(".featured-bottom-grid")
 
                 const gridItem = document.createElement("div")
                 gridItem.classList.add("all-cars-grid-item")
@@ -286,7 +292,21 @@ fetch(URL)
 
 // CMS FEATURED 
 
+const check = document.querySelector(".switch input")
 
+check.addEventListener("change", (e) => {
+    const textArea = document.querySelector(".message-field")
+    textArea.classList.toggle("active-message")
+    const dateTime = document.querySelector(".row")
+    dateTime.classList.toggle("active-message")
+})
+
+if (check.checked) {
+    const textArea = document.querySelector(".message-field")
+    textArea.classList.remove("active-message")
+    const dateTime = document.querySelector(".row")
+    dateTime.classList.add("active-message")
+}
 
 
 
