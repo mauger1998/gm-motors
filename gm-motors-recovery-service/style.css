@@ -352,7 +352,7 @@ main p {
 }
 @media (max-width:600px) {
     .cta-section h2 {
-        font-size: var(--mobile-heading-one);
+        font-size: var(--mobile-heading-two);
     }
 }
 @media (max-width:500px) {

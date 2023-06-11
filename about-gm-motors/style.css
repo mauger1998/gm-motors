@@ -578,14 +578,17 @@ main .wrapper {
     margin-top:1rem;
 }
 @media (max-width:1186px) {
-    .testimonials-section .column:nth-child(2) {
-        display:none;
-    }
+    
     .testimonials-section .wrapper {
         display:grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr;
         gap:2rem;
         row-gap:4rem;
+    }
+    .testimonials-section {
+        background-image: linear-gradient(to top, #030303, #03030300 100%), url(../gm-motors-png-about/samuele-errico-piccarini-xipq_ItleeY-unsplash1.png);
+        background-size:cover;
+        background-position:center;
     }
 }
 @media(max-width:1000px) {
@@ -608,6 +611,10 @@ main .wrapper {
         grid-template-columns: 1fr;
         gap:2rem;
         row-gap:4rem;
+    }
+    .testimonials-section .column:nth-child(2) {
+        grid-template-columns: 1fr;
+        gap:2rem;
     }
 }
 @media(max-width:700px) {
@@ -668,7 +675,7 @@ main .wrapper {
 }
 @media (max-width:600px) {
     .cta-section h2 {
-        font-size: var(--mobile-heading-one);
+        font-size: var(--mobile-heading-two);
     }
 }
 @media (max-width:500px) {
@@ -678,6 +685,7 @@ main .wrapper {
     .cta-section button {
         padding-inline:2rem;
     }
+   
 }
  /* Footer */
 
