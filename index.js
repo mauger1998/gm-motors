@@ -70,7 +70,7 @@ fetch(URL)
                 carsGridName.textContent = result.name
                 allCarsGridText.appendChild(carsGridName)
 
-                if (result.finance != null) {
+                if (result.finance) {
                     const finance = document.createElement("p")
                     finance.textContent = result.finance
                     allCarsGridText.appendChild(finance)
