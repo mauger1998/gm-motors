@@ -5,8 +5,8 @@
     --light-blue:#F8FAFD;
     --heading-one:90px;
     --mobile-heading-one:70px;
-    --heading-two:40px;
-    --mobile-heading-two:30px;
+    --heading-two:50px;
+    --mobile-heading-two:40px;
     --card-title:30px;
     --mobile-card-title:25px;
     --price:40px;
@@ -267,7 +267,7 @@ nav a:nth-child(3)  button{
 /* Main */
 main {
     background-color:white;
-    background-image: url(../recovery-png/yearone-GOkHtbgloRs-unsplash1.png);
+    background-image: linear-gradient(to right, #030303, #03030300 50%), url(../gm-motors-png-valet/logan-meis-7qLT-Msda1k-unsplash1.png);
     background-size:cover;
     background-position:center;
 
@@ -283,8 +283,6 @@ main .wrapper {
     display:flex;
     align-items: flex-start;
     justify-content: center;
-    padding-right:0;
-    padding-block:4rem;
     flex-direction: column;
     min-height:680px;
     gap:2rem;
@@ -317,6 +315,7 @@ main .wrapper {
     main .wrapper {
         padding-inline:1rem;
     }
+   
 }
 
 /* Intro */
@@ -413,13 +412,18 @@ main .wrapper {
     display:flex;
     flex-direction: column;
     align-items: flex-start;
-    gap:1rem;
+    gap:4rem;
 }
 .valet-right p:nth-of-type(1),
 .valet-right p span {
     display:flex;
     align-items: center;
     gap:0.5rem;
+}
+.valet-titles {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .valet-right > p:nth-of-type(1) {
     margin-bottom:-1rem;
@@ -494,7 +498,7 @@ main .wrapper {
     max-width:40ch;
     line-height:1.5;
 }
-@media (max-width:741px) {
+@media (max-width:789px) {
     .full-section .wrapper {
         display:grid;
         grid-template-columns: 1fr;
@@ -518,6 +522,9 @@ main .wrapper {
     }
 }
 /* CTA */
+.cta-section {
+    background: white;
+}
 .cta-section .wrapper {
     display:flex;
     flex-direction: column;
@@ -529,7 +536,8 @@ main .wrapper {
 .cta-section h2 {
     font-size:var(--heading-one);
     text-align: center;
-    line-height:1.2;
+    line-height:1;
+    max-width:10ch;
 }
 .cta-section button {
     background-color:var(--black);
@@ -613,9 +621,15 @@ main .wrapper {
     .valet-list {
         grid-template-columns: 1fr;
     }
+    .valet-list img {
+        width:25px;
+    }
 }
 
  /* Footer */
+ footer {
+    background-color:white;
+ }
 
  footer img {
     width:100px;

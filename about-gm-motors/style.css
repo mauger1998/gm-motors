@@ -4,9 +4,9 @@
     --glass:#D9D9D920;
     --light-blue:#F8FAFD;
     --heading-one:90px;
-    --mobile-heading-one:40px;
-    --heading-two:40px;
-    --mobile-heading-two:30px;
+    --mobile-heading-one:70px;
+    --heading-two:50px;
+    --mobile-heading-two:40px;
     --card-title:30px;
     --mobile-card-title:25px;
     --price:40px;
@@ -224,6 +224,9 @@ header {
     margin-right:0.5rem;
     color:white;
 }
+nav li {
+    color:white;
+}
 nav {
     display:flex;
     align-items: center;
@@ -232,13 +235,13 @@ nav {
 nav button {
     display:block;
     padding:0.5rem 1rem;
-    background-color:var(--black);
-    color:white;
-    border:2px solid var(--black);
+    background-color:white;
+    color:var(--black);
+    border:2px solid white;
 }
 nav a:nth-child(3)  button{
     background-color:transparent;
-    color:var(--black);
+    color:white;
 }
 .logo-container img {
     width:75px;
@@ -265,75 +268,39 @@ nav a:nth-child(3)  button{
 
 main {
     background-color:white;
+    background-image: linear-gradient(to right, #030303, #03030300 50%), url(../gm-motors-png-about/celik-studio-125RNY18eaQ-unsplash1.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 main p {
-    max-width:25ch;
+    max-width:35ch;
+    color:white;
+}
+main h1 {
+    color:white;
+    max-width:7ch;
 }
 main .wrapper {
     display:flex;
-    align-items: center;
-    padding-right:0;
-    padding-block:4rem;
-}
-.main-left {
-    width:60%;
-    display:flex;
-    flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
     gap:2rem;
-}
-.main-right {
-    width:40%;
-    margin-left:-18rem;
-    position:relative;
-    z-index:2;
-    margin-top:6rem;
-}
-.main-right img {
-    width:175%;
-}
-@media (max-width:1414px) {
-    main h1 {
-        font-size:80px;
-    }
+    min-height:680px;
+   
 }
 
+
+
 @media (max-width:1267px) {
-    main .wrapper {
-        flex-direction: column-reverse;
-        align-items: flex-start;
-        padding-block:8rem;
-        gap:4rem;
-    }
-    .main-right {
-        width:100%;
-        margin-left:0;
-        margin-top:0rem;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .main-right img {
-        width:80%;
-    }
-    .main-left {
-        width:100%;
-    }
+    
     nav {
         display:none;
     }
 }
-@media (max-width:881px) {
-    main h1 {
-        font-size:70px;
-    }
-}
-@media (max-width:779px) {
-    main h1 {
-        font-size:60px;
-    }
-}
+
 @media (max-width:700px) {
     main .wrapper {
         padding-inline:2rem;
@@ -350,6 +317,9 @@ main .wrapper {
 @media (max-width:500px) {
     main .wrapper {
         padding-inline:1rem;
+    }
+    main {
+        background-image: linear-gradient(to right, #030303, #03030300 100%), url(../gm-motors-png-about/celik-studio-125RNY18eaQ-unsplash1.png);
     }
 }
 
@@ -403,11 +373,13 @@ main .wrapper {
 @media (max-width:741px) {
     .passion-section .wrapper {
         grid-template-columns: 1fr;
+        gap:0.5rem;
     }
     .passion-section .column {
         display:flex;
         flex-direction: column;
         align-items: flex-start;
+        gap:0;
     }
 }
 @media (max-width:700px) {
@@ -482,6 +454,7 @@ main .wrapper {
         padding-block:8rem;
         padding-bottom:0rem;
     }
+    
    
     
     .team-section .column:nth-child(3) {
@@ -506,6 +479,9 @@ main .wrapper {
      }
     .team-section .column:nth-child(2) p {
         max-width:100%;
+     }
+    .team-section .column:nth-child(1) p {
+        margin-bottom:-2rem;
      }
     .team-section .column {
         display:flex;
@@ -534,7 +510,7 @@ main .wrapper {
 
 /* Test */
 .testimonials-section {
-    background-image: linear-gradient(#03030350, #03030350), url(../gm-motors-png-about/khamkeo-vilaysing-HD9P-xw2pEE-unsplash1.png);
+    background-image: url(../gm-motors-png-about/samuele-errico-piccarini-xipq_ItleeY-unsplash1.png);
     background-size:cover;
     background-position:center;
 }
@@ -544,7 +520,7 @@ main .wrapper {
 }
 .testimonials-section .wrapper {
     display:grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 2fr;
     gap:2rem;
     padding-bottom:2rem;
 }
@@ -554,7 +530,13 @@ main .wrapper {
     align-items: flex-start;
     gap:1rem;
 }
-.testimonials-section .column:nth-child(3) {
+.testimonials-section .column:nth-child(1) p,
+.testimonials-section .column:nth-child(1) p span {
+    display:flex;
+    align-items:center;
+    gap:0.5rem;
+}
+.testimonials-section .column:nth-child(2) {
     display:grid;
     grid-template-columns: 1fr 1fr;
     gap:2rem;
@@ -575,6 +557,11 @@ main .wrapper {
 .test-card p:nth-of-type(1) {
     font-weight:700;
     font-size:var(--mobile-card-title);
+}
+.test-card p {
+    font-weight:300;
+    font-size:var(--text);
+    line-height:1.5;
 }
 
 
@@ -606,6 +593,9 @@ main .wrapper {
         grid-template-columns: 1fr;
         row-gap:2rem;
 
+    }
+    .testimonials-section .column:nth-child(1) p:nth-of-type(1) {
+        margin-bottom:-1rem;
     }
     .quote  {
         grid-column: auto;
@@ -659,7 +649,8 @@ main .wrapper {
 .cta-section h2 {
     font-size:var(--heading-one);
     text-align: center;
-    line-height:1.2;
+    line-height:1;
+    max-width:10ch;
 }
 .cta-section button {
     background-color:var(--black);
@@ -689,6 +680,10 @@ main .wrapper {
     }
 }
  /* Footer */
+
+ footer {
+    background-color: white;
+ }
 
  footer img {
     width:100px;
