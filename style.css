@@ -116,9 +116,9 @@ button span {
     transition:opacity 0.5s, transform 0.5s;
     pointer-events:none;
     gap:2rem;
-    border-radius:0.5rem;
-   
+    border-radius:0.5rem;  
 }
+
 
 
 
@@ -224,13 +224,13 @@ nav {
 nav button {
     display:block;
     padding:0.5rem 1rem;
-    background-color:var(--black);
-    color:white;
-    border:2px solid var(--black);
+    background-color:white;
+    color:var(--black);
+    border:2px solid white;
 }
 nav a:nth-child(3)  button{
     background-color:transparent;
-    color:var(--black);
+    color:white;
 }
 .logo-container img {
     width:75px;
@@ -961,4 +961,8 @@ footer button {
 }
 .active-message {
     display:flex;
+}
+
+body {
+    overflow-x:hidden;
 }
