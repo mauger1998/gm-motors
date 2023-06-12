@@ -938,6 +938,16 @@ footer button {
 .box-active {
     max-height:600px !important;
 }
+.switch-box p {
+    line-height:1;
+    text-align:left;
+}
+@media (max-width:500px) {
+    .switch-box p {
+        line-height:1;
+        font-size:16px;
+    }
+}
 
 /* Message Field */
 .message-field {

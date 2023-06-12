@@ -291,12 +291,30 @@ h1 {
 main p {
     color:white;
 }
+main button {
+    color:var(--black);
+    background-color:white;
+    padding:1rem 4rem;
+    cursor:pointer;
+}
+
+@media (max-width:1000px) {
+    main {
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+    main {
+        background-image: linear-gradient(to right, #030303, #03030300 100%), url(recovery-png/hyundai-motor-group-r90ZgffimHk-unsplash1.png);
+    }
+}
 
 
 @media (max-width:700px) {
     main .wrapper {
         padding-inline:2rem;
     }
+   
 }
 
 @media (max-width:600px) {
@@ -309,9 +327,7 @@ main p {
     main .wrapper {
         padding-inline:1rem;
     }
-    main {
-        background-image: linear-gradient(to right, #030303, #03030300 100%), url(recovery-png/hyundai-motor-group-r90ZgffimHk-unsplash1.png);
-    }
+    
 }
 
 @media (max-width:361px) {
@@ -965,4 +981,83 @@ footer button {
 
 body {
     overflow-x:hidden;
+}
+
+/* Location */
+
+.location-left {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+.location-section .wrapper {
+    display:flex;
+    align-items: center;
+    gap:4rem;
+}
+.location-section button {
+    border:2px solid var(--black);
+    padding:0.5rem 2rem;
+    color:var(--black);
+    cursor:pointer;
+}
+.location-right {
+    width:50%;
+}
+.location-left {
+    width:50%;
+}
+.location-section img {
+    width:100%;
+}
+@media (max-width:1186px) {
+    .location-section .wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .location-left,
+    .location-right {
+        width:100%;
+    }
+}
+@media (max-width:700px) {
+    .location-section .wrapper {
+        padding-inline:2rem;
+    }
+}
+
+@media (max-width:600px) {
+    .location-section h2 {
+        font-size:var(--mobile-heading-two);
+    }
+    
+    .locations-left p {
+        font-size:var(--mobile-text);
+    }
+}
+
+
+@media (max-width:500px) {
+    .location-section .wrapper {
+        padding-inline:1rem;
+    }
+}
+
+/* Contact List */
+
+.contact-section img {
+    width:50px;
+}
+.contact-list {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:2rem;
+}
+.contact-list-item {
+    display:flex;
+    align-items: center;
+    gap:1rem;
 }
