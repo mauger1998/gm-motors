@@ -14,9 +14,7 @@
     --text:18px;
     --mobile-text:16px;
 }
-body {
-    background-color:var(--light-blue);
-}
+
 @font-face {
     font-family: customFont;
     src: url(Adieu-Regular.ttf);
@@ -233,7 +231,7 @@ nav a:nth-child(3)  button{
     color:white;
 }
 .logo-container img {
-    width:75px;
+    width:125px;
 }
 @media (max-width:1000px) {
     nav {
@@ -822,9 +820,15 @@ footer button {
     padding:0.5rem 2rem;
     color:var(--black);
 }
+footer a:nth-child(6) button {
+    background-color:var(--black);
+    border:2px solid var(--black);
+    padding:0.5rem 2rem;
+    color:white;
+}
 
 
-@media (max-width:950px) {
+@media (max-width:1050px) {
     footer .wrapper {
         padding-inline:2rem;
     }
@@ -984,7 +988,9 @@ body {
 }
 
 /* Location */
-
+.location-section {
+    background-color:white;
+}
 .location-left {
     display:flex;
     flex-direction: column;
@@ -1060,4 +1066,8 @@ body {
     display:flex;
     align-items: center;
     gap:1rem;
+}
+
+body {
+    background-color:white;
 }
