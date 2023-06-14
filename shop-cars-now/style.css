@@ -261,7 +261,7 @@ nav a:nth-child(3)  button{
 /* Main */
 main {
     background-color:white;
-    background-image:linear-gradient(to right, #030303, #03030300 50%),  url(../gm-motors-png-sales/car-showroom.png);
+    background-image:linear-gradient(to right, #030303, #03030300 50%),  url(../sales-images/gm-hybrid.png);
     background-size:cover;
 }
 main p {
@@ -307,7 +307,7 @@ main h1 {
         padding-inline:1rem;
     }
     main {
-        background-image: linear-gradient(to right, #030303, #03030300 75%), url(../gm-motors-png-sales/car-showroom.png);
+        background-image: linear-gradient(to right, #030303, #03030300 75%), url(../sales-images/gm-hybrid.png);
     }
 }
 /* Full */
