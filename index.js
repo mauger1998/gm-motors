@@ -72,7 +72,7 @@ fetch(URL)
 
                 if (result.finance) {
                     const finance = document.createElement("p")
-                    finance.textContent = result.finance
+                    finance.textContent = "Finance Available"
                     allCarsGridText.appendChild(finance)
                 } else {
                     const noFinance = document.createElement("p")

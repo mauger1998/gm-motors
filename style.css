@@ -410,6 +410,10 @@ main button {
 .featured-section a {
     align-self:flex-start ;
 }
+.all-cars-grid-item > img {
+    object-fit:cover;
+    aspect-ratio:1.5/1;
+}
 @media (max-width:1286px) {
   
     .featured-top {
