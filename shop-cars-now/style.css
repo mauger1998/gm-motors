@@ -263,6 +263,7 @@ main {
     background-color:white;
     background-image:linear-gradient(to right, #030303, #03030300 50%),  url(../sales-images/gm-hybrid.png);
     background-size:cover;
+    background-position:center;
 }
 main p {
     max-width:40ch;
