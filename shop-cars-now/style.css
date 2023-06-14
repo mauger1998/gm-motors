@@ -307,7 +307,7 @@ main h1 {
         padding-inline:1rem;
     }
     main {
-        background-image: linear-gradient(to right, #030303, #03030300 75%), url(../sales-images/gm-hybrid.png);
+        background-image: linear-gradient(to right, #030303, #03030300 100%), url(../sales-images/gm-hybrid.png);
     }
 }
 /* Full */
