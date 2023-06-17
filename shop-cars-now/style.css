@@ -623,6 +623,10 @@ main h1 {
     background-color:white;
 }
 
+.book-drive-section .column:nth-child(2) p {
+    margin-top:2rem;
+}
+
 .book-drive-section .wrapper {
     display:flex;
     flex-direction: column;
