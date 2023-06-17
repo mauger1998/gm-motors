@@ -33,7 +33,7 @@ document.addEventListener("click", (e) => {
 
 // CMS 
 
-let URL = "https://ehpg4evy.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20%22car%22%5D%20%7B%0A%20%20%20%20name%2C%0A%20%20%20%20price%2C%0A%20%20%20%20finance%2C%0A%20%20%20%20extraInfo%2C%0A%20%20%20%20%20%20featured%2C%0A%20%20%20%20%22imgUrl%22%3A%20image.asset-%3Eurl%0A%7D"
+let URL = "https://ehpg4evy.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20%22car%22%5D%20%7C%20order(order)%20%7B%0A%20%20%20%20name%2C%0A%20%20%20%20price%2C%0A%20%20%20%20finance%2C%0A%20%20%20%20extraInfo%2C%0A%20%20%20%20%20%20featured%2C%0A%20%20%20%20%22imgUrl%22%3A%20image.asset-%3Eurl%0A%7D"
 
 fetch(URL)
         .then((res) => res.json())
