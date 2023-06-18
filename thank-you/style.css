@@ -1,0 +1,141 @@
+:root {
+    --gold:#C9A85C;
+    --black:#030303;
+    --glass:#D9D9D920;
+    --light-blue:#F8FAFD;
+    --heading-one:90px;
+    --mobile-heading-one:70px;
+    --heading-two:50px;
+    --mobile-heading-two:40px;
+    --card-title:30px;
+    --mobile-card-title:25px;
+    --price:40px;
+    --mobile-price:40px;
+    --text:18px;
+    --mobile-text:16px;
+}
+
+@font-face {
+    font-family: customFont;
+    src: url(../Adieu-Regular.ttf);
+}
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+button {
+    font-family: customFont;
+    line-height:1;
+}
+
+p {
+    line-height:1.75;
+    font-size:var(--text);
+}
+
+h2 {
+    font-size:var(--heading-two);
+}
+
+h1 {
+    font-size:var(--heading-one);
+    color:var(--black);
+    text-align:left;
+    position:relative;
+}
+
+main,
+header,
+footer,
+section {
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    max-width:1440px;
+    width:100%;
+    padding:8rem 4rem;
+}
+
+a {
+    color:var(--black);
+    text-decoration: none;
+}
+ul {
+    list-style:none;
+}
+
+button {
+    cursor:pointer;
+    background-color:var(--black);
+    color:white;
+    border:2px solid var(--black);
+    padding:0.5rem 2rem;
+}
+button img {
+    width:50px;
+}
+button span {
+    display:flex;
+    align-items: center;
+}
+
+/* Main */
+
+.header-wrapper {
+    width:100%;
+    max-width:1440px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:1rem 4rem;
+}
+main .wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+}
+h1 {
+    font-size:var(--heading-one);
+    max-width:12ch;
+    text-align:center;
+} p {
+    max-width:70ch;
+    text-align:center;
+}
+
+@media(max-width:700px) {
+    main .wrapper,
+    .header-wrapper {
+        padding-inline:2rem;
+    }
+    h1 {
+        font-size: var(--mobile-heading-one);
+    }
+    p {
+        font-size:var(--text);
+    }
+}
+@media(max-width:500px) {
+    main .wrapper,
+    .header-wrapper {
+        padding-inline:1rem;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    p {
+        font-size:var(--text);
+    }
+}
