@@ -105,17 +105,84 @@ fetch(URL)
 
                 carArrow.addEventListener("click", (e) => {
                     moreInfoBox.classList.toggle("box-active")
-                })
+                })   
+                }
 
-                
+            });
+
+          
+          }
+        })
+        .catch((err) => console.error(err));
+
+
+let URLTWO = "https://ehpg4evy.api.sanity.io/v2021-10-21/data/query/production?query=*%5B_type%20%3D%3D%20%22newArrivals%22%5D%20%7B%0A%20%20name%2C%0A%20%20%20%20finance%2C%0A%20%20%20%20extraInfo%2C%0A%20%20%20%20price%2C%0A%20%20%20%20%22imgUrl%22%3A%20image.asset-%3Eurl%0A%7D"
+
+
+fetch(URLTWO)
+        .then((res) => res.json())
+        .then(({ result }) => {
+          const newSection = document.querySelector(".new-arrivals")
+          if (result.length > 0) {
+            const wrapper = document.createElement("div")
+            wrapper.classList.add("wrapper")
+            newSection.appendChild(wrapper)
+
+            const newLeft = document.createElement("div")
+            newLeft.classList.add("new-left")
+            wrapper.appendChild(newLeft)
+
+            const leftImg = document.createElement("img")
+            leftImg.src = result[0].imgUrl
+            newLeft.appendChild(leftImg)
+
+            const newRight = document.createElement("div")
+            newRight.classList.add("new-right")
+            wrapper.appendChild(newRight)
+
+            const mainTitle = document.createElement("h2")
+            mainTitle.textContent = "New Arrival"
+            newRight.appendChild(mainTitle)
+
+            const priceWrapper = document.createElement("div")
+            priceWrapper.classList.add("price-wrapper")
+            newRight.appendChild(priceWrapper)
+
+            const title = document.createElement("p")
+            title.textContent = result[0].name 
+            priceWrapper.appendChild(title)
+
+            const price = document.createElement("p")
+            price.textContent = `£${result[0].price}`
+            priceWrapper.appendChild(price)
+            price.classList.add("price")
 
            
+            const finance = document.createElement("p")
+            newRight.appendChild(finance)
+            if (result[0].finance) {
+                finance.textContent = "Finance Available"
+            } else {
+                finance.textContent = "No Finance Available"
+            }
+            
 
+            const info = document.createElement("p")
+            newRight.appendChild(info)
+            info.textContent = result[0].extraInfo
 
-                
+            const aTag = document.createElement("a")
+            newRight.appendChild(aTag)
+            aTag.setAttribute("href", "shop-cars-now#featured")
 
-                    
-                }
+            const button = document.createElement("button")
+            button.textContent = "SHOP NOW"
+            aTag.appendChild(button)
+
+            result.forEach((result, index) => {
+            
+
+        
 
             });
 
